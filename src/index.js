@@ -16,12 +16,8 @@ function Engine(Background) {
   Background.init(0,0);
 
   function start() {
-    try {
-      requestAnimFrame(start);
-      Background.draw();
-    } catch(e) {
-      return console.error(e);
-    }
+	  requestAnimFrame(start);
+	  Background.draw();
   }
 	start();
 }
