@@ -10,6 +10,7 @@ window.requestAnimFrame = (function(){
 })();
 
 var keyStatus = {
+  Space: false,
   ArrowUp: false,
   ArrowRight: false,
   ArrowDown: false,
