@@ -9,9 +9,15 @@
 				left: 0px;
 				background: transparent;
 			}
+			#background {
+				z-index: -2;
+			}
+			#main {
+				z-index: -1;
+			}
 			#ship {
-        z-index: 0;
-      }
+				z-index: 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -19,8 +25,12 @@
 		<canvas id="background" width="600" height="360">
 			Your browser does not support canvas. Please try again with a different browser.
 		</canvas>
+		<canvas id="main" width="600" height="360"></canvas>
 		<canvas id="ship" width="600" height="360"></canvas>
     <script src="./src/Drawable.js"></script>
+    <script src="./src/ObjectPool.js"></script>
+    <script src="./src/BulletPool.js"></script>
+    <script src="./src/Bullet.js"></script>
     <script src="./src/ImagesRepository.js"></script>
     <script src="./src/Background.js"></script>
 		<script src="./src/Ship.js"></script>
