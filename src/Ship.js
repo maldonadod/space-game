@@ -48,10 +48,7 @@ Object.assign(Ship, {
       this.fire();
 			this.counter = 0;
     }
-
-    //this.context.drawImage(ship, 32, -5, 45, 45, this.x, this.y, 50, 50);
-    this.context.drawImage(ship, spriteX, spriteY, 45, 45, this.x, this.y, 50, 50);
-
+    this.context.drawImage(ship, spriteX, spriteY, 45, 45, this.x, this.y, 45, 45);
     this.bullets.animate();
 	}
 });
