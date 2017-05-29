@@ -4,10 +4,8 @@ var Bullet = (function() {
     this.x = 0;
     this.y = 0;
 
-    const { width, height } = ImagesRepository.bullet;
-
-    this.width = width;
-    this.height = height;
+    this.width = 2;
+    this.height = 14;
   }
   Bullet.prototype.context = document.getElementById('main').getContext('2d');
 
