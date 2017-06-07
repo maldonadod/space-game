@@ -4,7 +4,9 @@
   "description": "Another canvas game",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npm run build && NODE_ENV=production node server.js",
+    "build": "webpack --config webpack.prod.config.js",
+    "start:dev": "webpack-dev-server --host=127.0.0.1"
   },
   "author": "Daniel Maldonado",
   "license": "ISC",
@@ -15,6 +17,8 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
