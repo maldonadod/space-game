@@ -11,7 +11,8 @@
   "author": "Daniel Maldonado",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "webpack": "^2.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
