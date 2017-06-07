@@ -1,3 +1,6 @@
+import { Background } from './Background'
+import { Ship } from './Ship'
+
 window.requestAnimFrame = (function(){
 	return  window.requestAnimationFrame   ||
 			window.webkitRequestAnimationFrame ||
@@ -8,23 +11,6 @@ window.requestAnimFrame = (function(){
 				window.setTimeout(callback, 1000 / 60);
 			};
 })();
-
-var keyStatus = {
-  Space: false,
-  ArrowUp: false,
-  ArrowRight: false,
-  ArrowDown: false,
-  ArrowLeft: false
-};
-
-document.onkeydown = e => {
-  let { code } = e;
-  keyStatus[code] = true;
-}
-document.onkeyup = e => {
-  let { code } = e;
-  keyStatus[code] = false;
-}
 
 Engine(Background);
 

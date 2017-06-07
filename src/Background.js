@@ -1,4 +1,7 @@
-var Background = Object.create(Drawable);
+import Drawable from './Drawable'
+import * as ImagesRepository from './ImagesRepository'
+
+const Background = Object.create(Drawable);
 Object.assign(Background, {
   speed: 1,
   canvas: document.getElementById('background'),
@@ -16,3 +19,7 @@ Object.assign(Background, {
     }
 	}
 });
+
+export {
+  Background
+}

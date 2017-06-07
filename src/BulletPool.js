@@ -1,3 +1,6 @@
+import ObjectPool from './ObjectPool'
+import { Bullet } from './Bullet'
+
 function BulletPool(size) {
 
   ObjectPool.call(this, size, Bullet);
@@ -25,3 +28,5 @@ function BulletPool(size) {
 }
 
 BulletPool.prototype = ObjectPool.prototype;
+
+export default BulletPool

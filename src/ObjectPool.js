@@ -17,3 +17,5 @@ function ObjectPool(size, entity) {
     }
   }
 }
+
+export default ObjectPool
