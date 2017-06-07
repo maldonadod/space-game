@@ -1,4 +1,9 @@
-var Ship = Object.create(Drawable);
+import { Controls } from './Controls'
+import Drawable from './Drawable'
+import BulletPool from './BulletPool'
+import * as ImagesRepository from './ImagesRepository'
+
+const Ship = Object.create(Drawable);
 Object.assign(Ship, {
   speed: 6,
   bullets: new BulletPool(30),
@@ -26,25 +31,25 @@ Object.assign(Ship, {
     let spriteX = 32;
     this.context.clearRect(0, 0, width, height);
 
-    if (keyStatus['ArrowLeft']) {
+    if (Controls['ArrowLeft']) {
       this.x -= speed;
       spriteX = -6;
       spriteY += 45;
     }
-    if (keyStatus['ArrowRight']) {
+    if (Controls['ArrowRight']) {
       this.x += speed;
       spriteX = 80;
       spriteY += 45;
     }
-    if (keyStatus['ArrowUp']) {
+    if (Controls['ArrowUp']) {
       this.y -= speed;
       spriteY += 45;
     }
-    if (keyStatus['ArrowDown']) {
+    if (Controls['ArrowDown']) {
       this.y += speed;
       spriteY += 45;
     }
-    if (keyStatus['Space'] && this.counter >= this.fireRate) {
+    if (Controls['Space'] && this.counter >= this.fireRate) {
       this.fire();
 			this.counter = 0;
     }
@@ -52,3 +57,7 @@ Object.assign(Ship, {
     this.bullets.animate();
 	}
 });
+
+export {
+  Ship
+}
